@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Access_Managment_API.Entities
 {
@@ -11,5 +12,8 @@ namespace Access_Managment_API.Entities
         public int Approver1Id { get; set; }
         [Required]
         public int Approver2Id { get; set; }
+
+        [JsonIgnore]
+        public ICollection<Access_Request> AccessRequests { get; set; } = new List<Access_Request>();
     }
 }

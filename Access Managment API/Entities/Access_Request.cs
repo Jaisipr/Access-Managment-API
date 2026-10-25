@@ -4,12 +4,12 @@ namespace Access_Managment_API.Entities
 {
     public class Access_Request
     {
-        [Required]
+        [Key]
         public int RequestId { get; set; }
-        [Required]
         public int AssetId { get; set; }
-        [Required]
         public int RequesterId { get; set; }
-        public string Status { get; set; } = "In progress";
+        public string Status { get; set; } = "In Progress";
+        public Asset? Asset { get; set; }
+
     }
 }
