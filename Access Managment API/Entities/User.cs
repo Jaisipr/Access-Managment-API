@@ -4,7 +4,7 @@ namespace Access_Managment_API.Entities
 {
     public class User
     {
-        [Key]
+        [Required]
         public int UserId { get; set; }
 
         public string UserName { get; set; } = "";
